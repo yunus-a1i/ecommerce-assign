@@ -11,7 +11,7 @@ export default function NotFound() {
           Page Not Found
         </h2>
         <p className="text-gray-600 mt-2 max-w-md mx-auto">
-          Sorry, we couldn't find the page you're looking for. It might have
+          Sorry, we couldn&apos;t find the page you&apos;re looking for. It might have
           been removed or the link might be incorrect.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">

@@ -17,7 +17,7 @@ export function CartList() {
           Your cart is empty
         </h3>
         <p className="text-gray-500 mb-6">
-          Looks like you haven't added anything to your cart yet.
+          Looks like you haven&apos;t added anything to your cart yet.
         </p>
         <Link href="/">
           <Button>Continue Shopping</Button>

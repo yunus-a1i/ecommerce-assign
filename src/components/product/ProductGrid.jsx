@@ -20,7 +20,7 @@ export function ProductGrid() {
           No products found
         </h3>
         <p className="text-gray-500 max-w-md">
-          We couldn't find any products matching your criteria. Try adjusting
+          We couldn&apos;t find any products matching your criteria. Try adjusting
           your filters or search terms.
         </p>
       </div>

@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useDispatch, useSelector } from 'react-redux';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { useCallback, useEffect } from 'react';
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useCallback, useEffect } from "react";
 import {
   toggleCategory,
   setPriceRange,
@@ -10,8 +10,8 @@ import {
   setSearch,
   resetFilters,
   setAllFilters,
-} from '../store/slices/filterSlice';
-import { buildQueryString, parseQueryParams } from '../lib/utils';
+} from "../store/slices/filterSlice";
+import { buildQueryString, parseQueryParams } from "../lib/utils";
 
 export function useFilters() {
   const dispatch = useDispatch();
@@ -24,12 +24,12 @@ export function useFilters() {
     if (Object.keys(params).length > 0) {
       dispatch(setAllFilters(params));
     }
-  }, []);
+  }, [searchParams, dispatch]);
 
   const updateURL = useCallback(
     (newFilters) => {
       const queryString = buildQueryString(newFilters);
-      router.push(queryString ? `/?${queryString}` : '/', { scroll: false });
+      router.push(queryString ? `/?${queryString}` : "/", { scroll: false });
     },
     [router]
   );
@@ -62,7 +62,7 @@ export function useFilters() {
 
   const handleResetFilters = () => {
     dispatch(resetFilters());
-    router.push('/', { scroll: false });
+    router.push("/", { scroll: false });
   };
 
   return {
